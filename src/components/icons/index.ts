@@ -4,6 +4,7 @@ import Search from '@/components/icons/SearchIcon.svg';
 import Close from '@/components/icons/CloseIcon.svg';
 import Refresh from '@/components/icons/RefreshIcon.svg';
 import MapFocus from '@/components/icons/MapFocusIcon.svg';
+import Fold from '@/components/icons/FoldIcon.svg';
 
 const Icons = {
   Bookmark,
@@ -12,6 +13,7 @@ const Icons = {
   Close,
   Refresh,
   MapFocus,
+  Fold,
 };
 
 export default Icons;
