@@ -1,9 +1,9 @@
 'use client';
 
-import { useCallback, useState } from 'react';
 import { Button } from '@/components/common/button';
 import { Icon } from '@/components/common/icon';
 import { Box } from '@chakra-ui/react';
+import { useCollapseStore } from '@/stores/useCollapseStore';
 
 interface CollapseProps {
   /** [필수] collapse 안 컨텐츠 */
@@ -11,16 +11,12 @@ interface CollapseProps {
 }
 
 export const Collapse = ({ children }: CollapseProps) => {
-  const [isOpen, setIsOpen] = useState(true);
-
-  const toggleOpen = useCallback(() => {
-    setIsOpen((prevState) => !prevState);
-  }, []);
+  const { isOpen, setCollapse } = useCollapseStore();
 
   return (
     <Box position="relative" zIndex="99999">
       <Button
-        onClick={toggleOpen}
+        onClick={setCollapse}
         style={{
           position: 'absolute',
           top: '50%',
